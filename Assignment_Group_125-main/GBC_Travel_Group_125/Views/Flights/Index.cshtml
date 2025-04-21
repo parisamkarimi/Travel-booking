@@ -1,0 +1,48 @@
+﻿@model IEnumerable<GBC_Travel_Group_125.Models.Flights>
+
+@{
+    ViewData["Title"] = "Flights";
+}
+
+
+
+    <div class="container py-2">
+        @Html.Partial("_SearchBar")
+    </div>
+
+
+<div class="container mt-3">
+    <h2>@ViewData["Title"]</h2>
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Create New</a>
+    </p>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-header bg-primary text-white">
+                        <i class="fas fa-plane-departure"></i> @Html.DisplayFor(modelItem => item.FlightNumber)
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Airline)</h5>
+                        <p class="card-text">
+                            From: @Html.DisplayFor(modelItem => item.FlightFrom) <br>
+                            To: @Html.DisplayFor(modelItem => item.FlightTo) <br>
+                            Depart: @Html.DisplayFor(modelItem => item.DepartureDateAndTime, "{0:g}") <br>
+                            Arrive: @Html.DisplayFor(modelItem => item.ArrivalDateAndTime, "{0:g}") <br>
+                            Capacity: @Html.DisplayFor(modelItem => item.Capacity) <br>
+                            Price: @Html.DisplayFor(modelItem => item.Price, "{0:C}")
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a asp-action="Details" asp-route-id="@item.FlightId" class="btn btn-info">Details</a>
+                        <a asp-action="Edit" asp-route-id="@item.FlightId" class="btn btn-secondary">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@item.FlightId" class="btn btn-danger">Delete</a>
+                        <a asp-action="Book" asp-route-id="@item.FlightId" class="btn btn-warning">Book</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
