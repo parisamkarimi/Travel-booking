@@ -1,6 +1,5 @@
 # GBC Travel Booking Application (Group 125)
 
-![License](https://img.shields.io/github/license/kabamehmetali/Assignment_Group_125) 
 
 ## Project Description
 **GBC Travel** is a web-based travel booking platform built with **ASP.NET Core MVC** and **C#**. It was developed as a group assignment (Group 125) to simulate a travel agency application. The platform allows users to browse and book travel services such as flights, hotels, and car rentals. It implements a role-based system using ASP.NET Core Identity for **authentication and authorization**, so that *travelers* (regular users) can search and book trips, while *admins* can manage listings and bookings. The project emphasizes a layered MVC architecture, secure user account management, and a responsive web interface for a smooth booking experience.
@@ -9,10 +8,8 @@
 **Prerequisites:** Ensure you have **.NET 6.0 or higher** SDK installed (the project targets .NET 6+ and ASP.NET Core). You will also need a SQL Server instance (e.g., **SQL Server Express LocalDB** or SQL Server) for the application’s database.
 
 **Steps to set up the project:**
-1. **Clone the Repository:** Download or clone this repository to your local machine using:  
-   ```bash
-   git clone https://github.com/kabamehmetali/Assignment_Group_125.git
-   ```
+1. **Clone the Repository:** Download or clone this repository to your local machine using:  https://github.com/parisamkarimi/Travel-booking
+   
 2. **Open the Solution:** Navigate to the project folder and open the `GBC_Travel_Group_125.sln` solution file in **Visual Studio 2022** (or later). Alternatively, you can use VS Code or the .NET CLI.
 3. **Restore Dependencies:** Visual Studio will automatically restore NuGet packages on opening the solution. If using CLI, run `dotnet restore` to install all dependencies.
 4. **Database Configuration:** Update the database connection string in `appsettings.json` if needed. By default, the project may use a LocalDB connection (e.g., `Server=(localdb)\MSSQLLocalDB;Database=GBCTravelDB;...`). Ensure SQL Express LocalDB is installed or modify the connection to point to your SQL Server.  
@@ -38,7 +35,7 @@ After launching the **GBC Travel** application, you can begin using the travel b
 - **Example Workflow:** A traveler searches for a flight by destination and date, finds a suitable option, and books it. An admin can add new flight listings or review bookings.
 
 ## Contributors
-**Group 125 Team:** This project was developed by **Mehmet Ali KABA** (GitHub: @kabamehmetali). If other team members contributed, their details can be added here.
+ This project was developed by **Parisa Karimi** (GitHub: @parisamkarimi).
 
 ## License
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for full license details.
